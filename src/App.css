@@ -1,38 +1,123 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17181f;
+  color: #ddd;
+}
+
+main {
+  max-width: 360px; /* pixels */
+  margin: 30px auto; /* center the main element */
+}
+
+h1 {
   text-align: center;
+  color: #fff;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  width: 100%; /* Make all input fields the same width */
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid #30313d;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input[type=datetime-local] {
+  color: #777;
+}
+
+form div.basic {
+  display: flex;
+  gap: 10px; /* Space between input fields */
+  margin-bottom: 10px;
+}
+
+form div.description {
+  margin-top: 10px;
+}
+
+form button {
+  width: 100%; /* Make the button the same width as input fields */
+  margin-top: 10px;
+  border-radius: 0;
+  padding: 10px;
+  background-color: #007bff; /* Example color for the button */
+  color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Example hover color for the button */
+}
+
+div.transactions {
+  margin-top: 15px;
+}
+
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #30313d;
+  border-radius: 5px;
+}
+div.transaction:first-child{
+  border-top: 0;
+}
+
+div.left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+div.name {
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.description {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+div.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+div.price {
+  font-size: 1rem;
+}
+
+div.price.green {
+  color: #1c1;
+}
+
+div.price.red {
+  color: #f00;
+}
+
+div.datetime {
+  display: flex;
+  font-size: 0.7rem;
+  gap:10px;
+  color: #888;
+}
+
+div.date, div.time {
+  display:inline-block;
+  margin-bottom: 3px; /* Space between date and time */
 }
