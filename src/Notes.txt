@@ -1,0 +1,5 @@
+rorybrown@Rorys-MacBook-Air api % git commit -m "-started my back end funcnality, made  a  settings file env formy backend  -defined my func component App with my initialized state variable with empty strings, -started my basic API endpoint susing express
+.js - GET /api/test: Returns a simple JSON response "test okay3" for testing purposes.
+-POST /api/transaction: Echoes the request body received through a POST request."
+error: pathspec 'okay3 for testing purposes.
+-POST /api/transaction: Echoes the request body received through a POST request.' did not match any file(s) known to gitg
