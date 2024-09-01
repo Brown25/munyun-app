@@ -1,3 +1,4 @@
+
 import './App.css';
 import React, { useState } from 'react';
 
@@ -8,11 +9,28 @@ function App() {
 
   function addNewTransaction(ev) {
     ev.preventDefault();
-    const url = process.env.REACT_APP_API_URL;
+    const url = 'http://localhost:4040/api/transaction'; // Corrected URL Line
     console.log(url);
-
-    //fetch('url')
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, description, dateTime }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((json) => {
+        console.log('result', json);
+      })
+      .catch((error) => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
   }
+  
+  
 
   return (
     <main>
