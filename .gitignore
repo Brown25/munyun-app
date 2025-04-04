@@ -11,6 +11,13 @@
 # production
 /build
 
+# Key files
+*.key
+*.pem
+*.pub
+key.txt
+key.txt.pub
+index.js
 # misc
 .DS_Store
 .env.local
